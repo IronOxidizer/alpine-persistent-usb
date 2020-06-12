@@ -58,7 +58,12 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Change the bottom line to the following:
   ```UUID={?m1-h0m3-uu1d} /home ext4 defaults,noatime 0 0``` where `{?m1-h0m3-uu1d}` is the UUID for your home partition at the last line (added from grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
-4. Run the following commands to save and reboot:
+4. Update lbu and apkcache
+  - Run `setup-lbu`
+  - Type `trueroot`
+  - Run `setup-apkcache`
+  - Type `/media/trueroot/cache`
+5. Run the following commands to save and reboot:
   - `lbu ci`
   - `reboot`
   
