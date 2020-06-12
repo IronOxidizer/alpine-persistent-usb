@@ -63,7 +63,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 1. Run the following commands for a simple dwm setup
   - `setup-xorg-base`
   - `apk add sudo dmenu st dwm font-fira-mono-nerd firefox`
-  - `sed -i '/%wheel all=(all) all/s/^#//g' file` or simply uncomment `%wheel all=(all) all`
+  - `sed -i '/%wheel all=(all) all/s/^#//g' /etc/sudoers` or simply uncomment `%wheel all=(all) all` in `/etc/sudoers`
   - `adduser main -G wheel`
   - `su main`
   - `echo 'exec dwm' >> ~/.xinitrc`
