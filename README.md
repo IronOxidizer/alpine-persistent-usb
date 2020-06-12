@@ -43,13 +43,13 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 ## Setup Home Partition
 
 1. Update your repositories and apkcache
+  - Run `apk add nano e2fsprogs dosfstools util-linux`
   - Run `nano /etc/apk/repositories`
   - Change top line to `/media/trueroot/apks`
   - Uncomment `edge/main` and `edge/community` by removing the `#`
   - Commount out everything else by addting a `#` at the beginning of the line
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 2. Format your partitions
-  - Run `apk add nano e2fsprogs dosfstools util-linux`
   - Run `mkfs.ext4 /dev/{?sd}` where `{?sd}` is the home partition
   - (OPTIONAL, shared partition only) Run `mkfs.fat -F32 /dev/{?sd}` where `{?sd}` is the shared partition
 3 Update your fstab to mount your home partition to `/home`
