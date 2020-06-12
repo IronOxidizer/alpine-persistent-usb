@@ -47,8 +47,8 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Select `Yes`
   - Exit
 3. Format your partitions
-  - Run `mkfs.ext4 /dev/{sd??}` where `{sd??}` is the home partition created in the step above
-  - (OPTIONAL, shared partition only) Run `mkfs.fat -F32 /dev/{sd??}` where `{sd??}` is the shared partition
+  - Run `mkfs.ext4 /dev/{?sd}` where `{?sd}` is the home partition created in the step above
+  - (OPTIONAL, shared partition only) Run `mkfs.fat -F32 /dev/{?sd}` where `{?sd}` is the shared partition
 4. Update your fstab to mount your home partition to `/home`
   - Run `blkid | grep /dev/{?sd} >> /etc/fstab` where `{?sd}` is your home partition created above
   - Run `nano /etc/fstab`
