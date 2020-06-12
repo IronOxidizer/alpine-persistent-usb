@@ -47,7 +47,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Run `nano /etc/apk/repositories`
   - Change top line to `/media/trueroot/apks`
   - Uncomment `edge/main` and `edge/community` by removing the `#`
-  - Commount out everything else by addting a `#` at the beginning of the line
+  - Comment out everything else by addting a `#` at the beginning of the line
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 2. Format your partitions
   - Run `mkfs.ext4 /dev/{?sd}` where `{?sd}` is the home partition
