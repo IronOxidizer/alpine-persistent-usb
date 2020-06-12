@@ -6,7 +6,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 ## Preparation
 
 1. Download the latest version of [Alpline Standard x86_64](https://www.alpinelinux.org/downloads/)
-2. Write it to a USB using `dd` or `rufus`
+2. Write it to a USB using `dd` or `rufus` and leave a shared or unallocated partition to use later for your `/home` directory
 3. Reboot to your boot menu and boot to Alpine on the USB
 
 ## Setup Root Partition
