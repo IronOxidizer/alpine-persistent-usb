@@ -19,7 +19,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 3. Run the following commands
   - `mkdir /media/trueroot`
   - `apk add util-linux nano` (nano is optional if you're comfortable with vi)
-  - `lsblk` and note what partition root (`/`) is running from on your USB
+  - `lsblk` and note what partition (usually `/media/usb`) the usb is running from on your USB
   - `blkid | grep /dev/{?0} >> /etc/fstab` where `{?0}` is the currently booted partition,
 4. Change your `fstab` to use the uuid and mount it to `/media/trueroot`
   - Run `nano /dev/fstab`
