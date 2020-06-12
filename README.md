@@ -28,7 +28,15 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   ```UUID={?m1-own-uu1d} /media/trueroot vfat defaults,noatime 0 0```
     where `{?m1-own-uu1d}` is the UUID for your root partition on the last line (added with grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
-5. Run the following commands to save and reboot:
+5. Partition your USB
+  - Run `apk add cfdisk`
+  - Run `cfdisk /dev/{?sd}` where `{?sd}` is the USB
+  - Create home partition (can also create a shared partition to act like a regular USB`
+  - Set home partition of type `Linux home`
+  - Select `Write`
+  - Select `Yes`
+  - Exit
+6. Run the following commands to save and reboot:
   - `lbu ci`
   - `reboot`
   
@@ -40,24 +48,17 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Uncomment `edge/main` and `edge/community` by removing the `#`
   - Commount out everything else by addting a `#` at the beginning of the line
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
-2. Partition your USB
-  - Run `apk add cfdisk e2fsprogs dosfstools nano util-linux`
-  - Run `cfdisk /dev/{?sd}` where `{?sd}` is the USB
-  - Create home partition (can also create a shared partition to act like a regular USB`
-  - Set home partition of type `Linux home`
-  - Select `Write`
-  - Select `Yes`
-  - Exit
-3. Format your partitions
-  - Run `mkfs.ext4 /dev/{?sd}` where `{?sd}` is the home partition created in the step above
+2. Format your partitions
+  - Run `apk add nano e2fsprogs dosfstools util-linux`
+  - Run `mkfs.ext4 /dev/{?sd}` where `{?sd}` is the home partition
   - (OPTIONAL, shared partition only) Run `mkfs.fat -F32 /dev/{?sd}` where `{?sd}` is the shared partition
-4. Update your fstab to mount your home partition to `/home`
+3 Update your fstab to mount your home partition to `/home`
   - Run `blkid | grep /dev/{?sd} >> /etc/fstab` where `{?sd}` is your home partition created above
   - Run `nano /etc/fstab`
   - Change the bottom line to the following:
   ```UUID={?m1-h0m3-uu1d} /home ext4 defaults,noatime 0 0``` where `{?m1-h0m3-uu1d}` is the UUID for your home partition at the last line (added from grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
-5. Run the following commands to save and reboot:
+4. Run the following commands to save and reboot:
   - `lbu ci`
   - `reboot`
   
