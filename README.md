@@ -51,8 +51,8 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 2. Format your partitions
   - Run `mkfs.ext4 /dev/{?sd}` where `{?sd}` is the home partition
-  - (OPTIONAL, shared partition only) Run `mkfs.fat -F32 /dev/{?sd}` where `{?sd}` is the shared partition 
-3 Update your fstab to mount your home partition to `/home`
+  - (OPTIONAL, shared partition only) Run `mkfs.fat -F32 /dev/{?sd}` where `{?sd}` is the shared partition
+3. Update your fstab to mount your home partition to `/home`
   - Run `blkid | grep /dev/{?sd} >> /etc/fstab` where `{?sd}` is your home partition created above
   - Run `nano /etc/fstab`
   - Change the bottom line to the following:
