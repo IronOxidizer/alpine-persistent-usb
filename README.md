@@ -42,6 +42,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 2. Partition your USB
   - Run `apk add cfdisk e2fsprogs dosfstools nano util-linux`
+  - Run `cfdisk`
   - Create home partition (can also create a shared partition to act like a regular USB`
   - Set home partition of type `Linux home`
   - Select `Write`
