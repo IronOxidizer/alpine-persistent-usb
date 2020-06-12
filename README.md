@@ -25,7 +25,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Run `nano /dev/fstab`
   - Replace the line that contains your root partition with the UUID at the bottom line to creating the following:
   ```UUID={?m1-own-uu1d} /media/trueroot vfat defaults,noatime 0 0```
-    where `{?m1-own-uu1d}` is the UUID on the last line (added with grep)
+    where `{?m1-own-uu1d}` is the UUID for your root partition on the last line (added with grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 5. Run the following commands to save and reboot:
   - `lbu ci`
@@ -53,7 +53,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Run `blkid | grep /dev/{?sd} >> /etc/fstab` where `{?sd}` is your home partition created above
   - Run `nano /etc/fstab`
   - Change the bottom line to the following:
-  ```UUID={?m1-h0m3-uu1d} /home ext4 defaults,noatime 0 0``` where `{?m1-h0m3-uu1d}` is the UUID at the bottom line from grep
+  ```UUID={?m1-h0m3-uu1d} /home ext4 defaults,noatime 0 0``` where `{?m1-h0m3-uu1d}` is the UUID for your home partition at the last line (added from grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 5. Run the following commands to save and reboot:
   - `lbu ci`
