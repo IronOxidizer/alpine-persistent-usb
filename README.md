@@ -1,5 +1,5 @@
 # alpine-persistent-usb
-Guide for making a Alpine Linux USB with persistence
+Guide for making an Alpine Linux USB with persistence
 
 Note: Replace all instances of `{?X}` (including the braces) with the proper value
 
