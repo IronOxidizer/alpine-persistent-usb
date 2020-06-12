@@ -68,5 +68,5 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - `su main`
   - `echo 'exec dwm' >> ~/.xinitrc`
   - `echo 'startx' >> ~/.profile`
-  - `sudo lbi ci`
+  - `sudo lbu ci`
   - `startx`
