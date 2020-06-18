@@ -92,3 +92,6 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - https://wiki.archlinux.org/index.php/Install_Arch_Linux_on_a_removable_medium#Tips
   - https://wiki.archlinux.org/index.php/Improving_performance#Reduce_disk_reads/writes
   - https://foxutech.com/how-to-disable-enable-journaling/
+  
+5. Config npm if necessary
+  - `npm config set prefix '~/.npm'`
