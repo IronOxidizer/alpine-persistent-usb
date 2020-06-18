@@ -94,4 +94,4 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - https://foxutech.com/how-to-disable-enable-journaling/
   
 5. Config npm if necessary
-  - `npm config set prefix '~/.npm'`
+  - `npm config set prefix '~/.local'`
