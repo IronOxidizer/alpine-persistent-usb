@@ -84,5 +84,6 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 2. Follow this guide for audio
   - https://wiki.alpinelinux.org/wiki/Sound_Setup
   
-3. Follow this guide for flatpak audio
+3. Follow this guide for flatpak
+  - Install flatpaks with `--user` since root (system) installs will not save, but user saves in `/home` partition
   - https://gist.github.com/IronOxidizer/06bd98459e9bb0b9d2de3b76fa0ca421
