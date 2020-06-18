@@ -87,3 +87,8 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 3. Follow this guide for flatpak
   - Install flatpaks with `--user` since root (system) installs will not save, but user saves in `/home` partition
   - https://gist.github.com/IronOxidizer/06bd98459e9bb0b9d2de3b76fa0ca421
+
+4. Reduce drive writes
+  - https://wiki.archlinux.org/index.php/Install_Arch_Linux_on_a_removable_medium#Tips
+  - https://wiki.archlinux.org/index.php/Improving_performance#Reduce_disk_reads/writes
+  - https://foxutech.com/how-to-disable-enable-journaling/
