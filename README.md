@@ -95,3 +95,6 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   
 5. Config npm if necessary
   - `npm config set prefix '~/.local'`
+
+6. Config inittab (reduce ttys)
+  - `nano /etc/inittab`
