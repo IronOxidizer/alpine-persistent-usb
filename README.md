@@ -98,3 +98,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 
 6. Config inittab (reduce ttys)
   - `nano /etc/inittab`
+
+7. Config OpenRc for faster boot times
+  - `nano /etc/rc.conf`
+  - uncomment `rc_parallel="YES"`
