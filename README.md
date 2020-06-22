@@ -102,3 +102,5 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 7. Config OpenRc for faster boot times
   - `nano /etc/rc.conf`
   - uncomment `rc_parallel="YES"`
+
+8. `lbu ci`
