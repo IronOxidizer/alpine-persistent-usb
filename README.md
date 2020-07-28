@@ -104,3 +104,8 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - uncomment `rc_parallel="YES"`
 
 8. `lbu ci`
+
+# TODO
+
+- Figure out how to use F2FS for home and root partition
+- Reduce disk reads/writes, disable journaling
