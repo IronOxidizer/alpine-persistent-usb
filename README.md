@@ -18,18 +18,16 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Store cache in default
 3. Run the following commands
   - `mkdir /media/trueroot`
-  - `apk add util-linux nano` (nano is optional if you're comfortable with vi)
+  - `apk add util-linux cfdisk nano` (nano is optional if you're comfortable with vi)
   - `lsblk` and note what partition (usually `/media/usb`) the usb is running from on your USB
   - `blkid | grep /dev/{?0} >> /etc/fstab` where `{?0}` is the currently booted partition,
 4. Change your `fstab` to use the uuid and mount it to `/media/trueroot`
-  - Run `apk add nano`
   - Run `nano /etc/fstab`
   - Replace the line that contains your root partition with the UUID at the bottom line to creating the following:
   ```UUID={?m1-own-uu1d} /media/trueroot vfat defaults,noatime 0 0```
     where `{?m1-own-uu1d}` is the UUID for your root partition on the last line (added with grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 5. Partition your USB
-  - Run `apk add cfdisk`
   - Run `cfdisk /dev/{?sd}` where `{?sd}` is the USB
   - Create home partition (can also create a shared partition to act like a regular USB`
   - Set home partition of type `Linux home`
