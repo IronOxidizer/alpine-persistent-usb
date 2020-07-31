@@ -101,12 +101,3 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - uncomment `rc_parallel="YES"`
 
 8. `lbu ci`
-
-# Personal desktop environment
-- Custom DWM
-- Luke Smith ST
-- Bemenu
-
-# TODO
-
-- Reduce disk reads/writes, disable journaling
