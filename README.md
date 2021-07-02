@@ -54,7 +54,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - Run `blkid | grep /dev/{?sd} >> /etc/fstab` where `{?sd}` is your home partition created above
   - Run `nano /etc/fstab`
   - Change the bottom line to the following:
-  ```UUID={?m1-h0m3-uu1d} /home ext4 defaults,noatime 0 0``` where `{?m1-h0m3-uu1d}` is the UUID for your home partition at the last line (added from grep)
+  ```UUID={?m1-h0m3-uu1d} /home f2fs defaults,noatime 0 0``` where `{?m1-h0m3-uu1d}` is the UUID for your home partition at the last line (added from grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 4. Update lbu and apkcache
   - Run `setup-lbu`
