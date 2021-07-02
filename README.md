@@ -12,13 +12,13 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
 ## Setup Root Partition
 
 1. Login using login: `root`, password: (none)
-2. Run `setup-alpine`
+2. Run `mkdir /media/trueroot`
+3. Run `setup-alpine`
   - Diskless install
-  - Store configs in default
-  - Store cache in default
-3. Run the following commands
-  - `mkdir /media/trueroot`
-  - `apk add util-linux cfdisk nano` (nano is optional if you're comfortable with vi)
+  - Store configs in `trueroot`
+  - Store cache in `/media/trueroot/cache`
+4. Run the following commands
+  - `apk add util-linux nano` (nano is optional if you're comfortable with vi)
   - `lsblk` and note what partition (usually `/media/usb`) the usb is running from on your USB
   - `blkid | grep /dev/{?0} >> /etc/fstab` where `{?0}` is the currently booted partition,
 4. Change your `fstab` to use the uuid and mount it to `/media/trueroot`
@@ -28,7 +28,7 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
     where `{?m1-own-uu1d}` is the UUID for your root partition on the last line (added with grep)
   - Press `ctrl`+`o`, followed by `ctrl`+`x` to save and exit
 5. Partition your USB
-  - Run `cfdisk /dev/{?sd}` where `{?sd}` is the USB
+  - Run `fdisk /dev/{?sd}` where `{?sd}` is the USB
   - Create home partition (can also create a shared partition to act like a regular USB`
   - Set home partition of type `Linux home`
   - Select `Write`
