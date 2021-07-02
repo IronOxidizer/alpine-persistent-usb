@@ -70,8 +70,9 @@ Note: Replace all instances of `{?X}` (including the braces) with the proper val
   - `setup-xorg-base`
   - `apk add sudo dmenu st dwm font-fira-mono-nerd firefox`
   - `sed -i '/%wheel all=(all) all/s/^#//g' /etc/sudoers` or simply uncomment `%wheel all=(all) all` in `/etc/sudoers`
-  - `adduser main -G wheel`
-  - `su main`
+  - `adduser user -G wheel`
+  - `groupadd user input,tty,video,wheel`
+  - `su user`
   - `echo 'exec dwm' >> ~/.xinitrc`
   - `echo 'startx' >> ~/.profile`
   - `sudo lbu ci`
